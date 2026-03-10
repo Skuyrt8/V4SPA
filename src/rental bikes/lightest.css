@@ -1,0 +1,99 @@
+/* Variables para colores */
+:root {
+    --color-bg: #111;
+    --color-hover: rgb(182, 191, 82);
+    --color-white: #fff;
+    --color-border: #333;
+}
+
+
+/* Estilo para el enlace que envuelve la imagen */
+.img-preview-link {
+    cursor: zoom-in;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.img-preview-link:hover {
+    transform: scale(1.03);
+}
+
+/* El contenedor del Lightbox (oculto por defecto) */
+.modal-lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000; /* Por encima de todo */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mostrar cuando se hace clic */
+.modal-lightbox:target {
+    display: flex;
+}
+
+/* Fondo oscuro con desenfoque */
+.lightbox-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    cursor: zoom-out;
+}
+
+/* Contenedor de la imagen ampliada */
+.lightbox-container {
+    position: relative;
+    max-width: 90%;
+    max-height: 85vh;
+    z-index: 10001;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    padding: 4em 14em;
+    animation: zoomIn 0.3s ease-out;
+}
+
+.lightbox-container img {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 2px;
+    background-color: #ffffff;
+    border: 2px solid #ffffff33;
+}
+
+/* Botón de cerrar */
+.close-lightbox {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    color: white;
+    font-size: 3rem;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+/* Texto inferior */
+.lightbox-caption {
+    color: var(--color-hover);
+    margin-top: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    /* Gradiente radial: color de centro hacia afuera */
+    background: radial-gradient(circle, #111111 50%, #ffffff 80%);
+    padding: 0.2rem;
+}
+
+/* Animación de entrada */
+@keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}

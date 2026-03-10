@@ -1,0 +1,126 @@
+/* Variables para colores */
+:root {
+    --color-bg: #111;
+    --color-hover: rgb(182, 191, 82);
+    --color-white: #fff;
+    --color-border: #333;
+}
+
+/* Reset general */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body, header {
+    margin: 0;
+    padding: 0;
+    font-family: "barlow";
+}
+
+body {
+    margin-top: 60px; /* Deja espacio para el nav fijo */
+}
+
+main {
+    margin: 0 auto;
+    background-color: #111; /* Asegura que el main tenga el color de fondo correcto */
+}
+
+/* The team */
+
+.aboutus__containter {
+    display: flex;
+}
+
+.grid__gallery {
+    width: 50%;
+}
+
+.support__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    padding: 0 1rem;
+    width: 50%;
+}
+
+.support__item {
+    color: white;
+    /* Reducimos el margen inferior aquí si estamos usando separadores para un mejor control */
+    padding: 1rem;
+    margin: auto;
+    margin-top: 1px;
+}
+
+.support__logo {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+}
+
+.support__logo img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: auto;
+    display: block;
+    margin-bottom: 0;
+    margin-top: 1px;
+}
+
+.support__content {
+    font-size: 1.4em;
+    margin: auto; /* Mantiene el contenido centrado horizontalmente */
+    padding: 0rem 4rem;
+    /* Elimina el margen inferior si ya ajustaste support__item o controlas el espacio con el hr */
+}
+
+/* Reducir el espacio entre párrafos */
+.support__content p {
+    margin: auto;
+    margin-bottom: 4rem;
+}
+
+/* Opcional: reducir el margen general entre bloques */
+.support__item {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .support__container {
+        padding: 20px 0;
+    }
+
+    .support__logo img {
+        max-width: 85%;
+    }
+
+    .support__content {
+        font-size: 1.4rem; /* Más pequeño para móviles */
+        line-height: 1.6; /* Mejor espaciado entre líneas */
+        text-align: justify; /* Justifica para facilitar la lectura */
+    }
+
+    .support__item {
+        margin: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .aboutus__containter {
+        flex-direction: column; /* Coloca uno arriba del otro */
+    }
+
+    .support__container,
+    .grid__gallery {
+        width: 100%; /* Que ocupen todo el ancho */
+        padding: 0;
+    }
+}

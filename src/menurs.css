@@ -1,0 +1,105 @@
+/* Variables para colores */
+:root {
+    --color-bg: #111;
+    --color-hover: rgb(182, 191, 82);
+    --color-white: #fff;
+    --color-border: #333;
+}
+
+/* Reset general */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body, header {
+    margin: 0;
+    padding: 0;
+    font-family: "barlow";
+}
+
+body {
+    margin-top: 60px; /* Deja espacio para el nav fijo */
+}
+
+main {
+    margin: 0 auto;
+}
+
+/* HELP BUTTON (Mantienes tu estilo original) */
+
+.help-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #222;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 12px 18px;
+    border: 1px solid #89a746;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 9999;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.help-button:hover {
+    background-color: rgb(118, 138, 47);
+    transform: scale(1.05);
+    color: #ffffff;
+}
+
+/* MENU SOCIAL NETWORKS*/
+
+.sn__box{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 50%; /* Posiciona la parte inferior de la caja al 50% de la altura */
+    right: 0;
+    /* Mueve la caja hacia arriba la mitad de su propia altura para centrarla verticalmente */
+    transform: translateY(50%); 
+    
+    color: #ffffff;
+    font-weight: bold;
+    border: 1px solid #89a746;
+    border-right: none; /* Elimina el borde de la derecha ya que está pegado */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 9998;
+    /* font-size: 0.8rem; (No es necesario, se ajusta en el icono <i>) */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sn-button {
+    /* flex-wrap:wrap; (Eliminado, ya no es necesario) */
+    background-color: #222;
+    color: #ffffff;
+    
+    /* Configuración para centrar el icono y darle un tamaño fijo */
+    display: flex;
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    
+    width: 50px; /* Tamaño del botón cuadrado */
+    height: 50px;
+    padding: 0; /* Eliminamos el padding que ya no es necesario con width/height */
+    
+    text-decoration: none;
+    z-index: 9990;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Estilo para los iconos dentro de los botones */
+.sn-button i {
+    font-size: 1.5rem; /* Hace el icono más grande y visible */
+    line-height: 1; /* Ayuda a asegurar el centrado perfecto */
+    color: rgb(255, 255, 255);
+}
+
+.sn-button:hover {
+    background-color: rgb(118, 138, 47);
+    transform: scale(1.1); /* Ligeramente más grande al ser iconos */
+    color: #ffffff;
+}
+
+

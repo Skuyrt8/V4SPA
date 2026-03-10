@@ -1,0 +1,486 @@
+/* Variables para colores */
+:root {
+    --color-bg: #111;
+    --color-hover: rgb(182, 191, 82);
+    --color-white: #fff;
+    --color-border: #333;
+}
+
+/* Reset general */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body, header {
+    margin: 0;
+    padding: 0;
+    font-family: "barlow";
+}
+
+body {
+    margin-top: 60px; /* Deja espacio para el nav fijo */
+}
+
+main {
+    margin: 0 auto;
+}
+
+/* Navegador */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: var(--color-bg);
+    box-shadow: 0 0 25px #0009;
+    z-index: 9999;
+    font-family: "barlow", sans-serif;
+    font-weight: 900;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+}
+
+/* Logo */
+.nav__logo {
+    max-width: 200px;
+    display: block;
+}
+
+.nav__logo-container {
+    flex-shrink: 0;
+    flex-grow: 2;
+}
+
+/* Menú principal */
+.nav__ul-container {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    transition: max-height 0.3s ease-in-out;
+    max-height: none;
+    overflow: visible;
+}
+
+.nav__ul {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav__item {
+    list-style: none;
+}
+
+.nav__link {
+    color: var(--color-white);
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: 1.2rem;
+    margin: 0;
+    border-bottom: 5px solid transparent;
+}
+
+.nav__link:hover {
+    color: var(--color-hover);
+}
+
+.nav__link.active {
+    color: var(--color-hover);
+    border-bottom: 5px solid var(--color-hover);
+}
+
+/* Toggle button (hamburguesa) */
+.nav__toggle {
+    display: none;
+}
+
+
+
+/* Banner con Carrusel */
+
+
+.banner {
+    width: 100%;
+    height: 80dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    overflow: hidden;
+    z-index: 4;
+    font-family: "barlow";
+}
+
+.banner__content {
+    z-index: 6;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel__item {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 0.2s;
+    display: inline-block;
+}
+
+.carousel__item img {
+    max-width: 100%; /* Asegura que la imagen no se desborde */
+    height: auto; /* Mantiene la proporción de la imagen */
+    position: relative; /* Para usar top y bottom */
+    bottom: 300px;
+    filter: brightness(0.2);
+}
+
+.carousel__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8; /* Igual que la imagen para ese efecto "oscuro" de fondo */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+
+
+
+
+
+/* Botones del banner */
+
+.tour-button {
+    background-color: transparent;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 18px 36px;
+    border: 3px solid #ffffff;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 9999;
+    font-size: 1rem;
+    margin: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.tour-button:hover {
+    background-color: rgba(118, 138, 47, 0.8);
+    transform: scale(1.05);
+    color: #ffffff;
+}
+
+.rental-button {
+    background-color: transparent;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 18px 36px;
+    border: 3px solid #ffffff;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 9999;
+    font-size: 1rem;
+    margin: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.rental-button:hover {
+    background-color: rgba(118, 138, 47, 0.8);
+    transform: scale(1.05);
+    color: #ffffff;
+}
+
+
+/* Footer General */
+
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0px;
+    font-family: "barlow";
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* Estilos del Logo */
+
+.footer__img1 img {
+    display: flex;
+    max-width: 300px;
+    min-width: 120px;
+    min-height: 10px;
+    max-height: 290px;
+    gap: 1px;
+}
+
+.footer__links {
+    display: flex;
+    flex-flow: row wrap;
+    gap:8rem;
+}
+
+/* Columnas de enlaces */
+.footer__columns {
+    display: flex;
+}
+
+.footer__info {
+    color: var(--color-hover);
+}
+
+.footer__info h6 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px 0 30px 0;
+}
+
+.footer__info a {
+    display: flex;
+    flex-flow: row;
+    color: white;
+    text-decoration: none;
+    padding-bottom: 25px;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.footer__info p {
+    display: flex;
+    flex-flow: row;
+    color: white;
+    text-decoration: none;
+    padding-bottom: 15px;
+    font-size: 1rem;
+    margin: auto;
+}
+
+.footer__info:nth-child(){
+    display: flex;
+    flex-flow: row;
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    padding-bottom: 15px;
+    font-size: 1rem;
+    margin: auto;
+}
+
+.footer__info a:hover {
+    color: #89a746;
+}
+
+/* Botón "KNOW MORE" */
+.knowmore__button {
+    background-color: transparent;
+    border: 1px solid rgb(118, 138, 47);
+    color: white;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.knowmore__button:hover {
+    background-color: rgb(118, 138, 47);
+}
+
+
+
+/* Responsive Nav */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-wrap: wrap;
+        background-color: #111;
+    }
+
+    .nav__toggle {
+        display: block;
+        background: none;
+        color: white;
+        font-size: 2rem;
+        border: none;
+        padding: 20px;
+        cursor: pointer;
+    }
+
+    .nav__ul-container {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        background-color: var(--color-bg);
+    }
+
+    .nav__ul-container.active {
+        max-height: 300px;
+    }
+
+    .nav__ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav__link {
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+        border-bottom: 1px solid var(--color-border);
+    }
+}
+
+/* Responsive Banner */
+
+@media (max-width: 768px) {
+    .banner {
+        width: 100%;
+        height: 90dvh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        background-color: rgb(0, 0, 0);
+        position: relative;
+        overflow: hidden;
+        z-index: 4;
+        font-family: "barlow";
+    }
+
+    .banner__content {
+        z-index: 6;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .carousel {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .carousel__item {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        transition: opacity 0.2s;
+        display: inline-block;
+    }
+
+    .carousel__item img {
+        max-width: 100%; /* Asegura que la imagen no se desborde */
+        height: auto; /* Mantiene la proporción de la imagen */
+        position: relative; /* Para usar top y bottom */
+        bottom: 300px;
+        filter: brightness(0.2);
+    }
+
+    .carousel__video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.8; /* Igual que la imagen para ese efecto "oscuro" de fondo */
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+}
+        
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer__container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem; /* Espacio entre columnas */
+    }
+
+    .footer__columns {
+        margin-top: 2rem;
+    }
+
+    .footer__info {
+        gap: 1.25rem;
+    }
+
+    .footer__info p,
+    .footer__info a {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.highlight {
+    border-bottom: 3px solid #89a746; /* Color y grosor del subrayado */
+    padding-bottom: 0.2rem;
+}
+
+
+/* Divider */
+
+.divider {
+    color: rgb(0, 128, 255);
+    display: flex;
+    font-size: 3px;
+    font-weight: 500;
+    height: 10px;
+    line-height: 10px;
+}
+
+/* HELP BUTTON */
+
+.help-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #222;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 12px 18px;
+    border: 1px solid #89a746;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 9999;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.help-button:hover {
+    background-color: rgb(118, 138, 47);
+    transform: scale(1.05);
+    color: #ffffff;
+}
+
+
+

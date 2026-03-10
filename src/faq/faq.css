@@ -1,0 +1,155 @@
+:root {
+    --color-bg: #111;
+    --color-hover: rgb(182, 191, 82);
+    --color-white: #fff;
+    --color-border: #333;
+}
+
+/* Reset general */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body, header {
+    margin: 0;
+    padding: 0;
+    font-family: "Barlow", sans-serif;
+}
+
+body {
+    margin-top: 60px; /* Espacio para nav fijo */
+}
+
+main { 
+    margin: 0 auto;
+}
+
+/* ========== BANNER ========== */
+.banner {
+    width: 100%;
+    height: 34vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+    z-index: 4;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+.carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel__item {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+.carousel__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 40%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.banner__content {
+    position: relative;
+    z-index: 6;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0 2rem;
+    text-align: left;
+}
+
+.banner__title {
+    font-size: clamp(2rem, 5vw, 4.6rem);
+    margin: auto;
+    text-align: center;
+    font-style: italic;
+}
+
+/* ========== FAQ ========== */
+
+.faq__content {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+h1 {
+    margin: 1rem 2rem 1rem 2rem;
+    font-style: italic;
+    font-size: 2rem;
+}
+
+details {
+    background-color: #eee;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    list-style: none;
+    width: 80%;
+    margin: 1rem auto;
+    font-style: italic;
+    padding: 10px;
+}
+
+details[open] {
+    border: 1px solid #ddd;
+}
+
+summary {
+    background-color: transparent;
+    list-style: none;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    font-size: 1.8rem;
+}
+
+li {
+    list-style: none;
+    font-size: 1.6rem;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .banner {
+        height: auto;
+        padding: 3rem 1rem;
+        text-align: center;
+    }
+
+    .banner__content {
+        align-items: center;
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    .banner__title {
+        font-size: 2.4rem;
+    }
+
+    h1 {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    details {
+        width: 90%;
+        font-size: 1rem;
+        margin: 1rem auto;
+    }
+}

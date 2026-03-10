@@ -1,0 +1,150 @@
+/* Variables para colores */
+:root {
+    --color-bg: #111;
+    --color-hover: rgb(182, 191, 82);
+    --color-white: #fff;
+    --color-border: #333;
+}
+
+/* Reset general */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body, header {
+    margin: 0;
+    padding: 0;
+    font-family: "barlow";
+}
+
+body {
+    margin-top: 60px; /* Deja espacio para el nav fijo */
+}
+
+main {
+    margin: 0 auto;
+}
+
+/* Main */
+
+.ul__container{
+    margin: 0;
+    padding: 0;
+}
+
+.card__item {
+    position: relative;
+    background-color: #111;
+    width: 100%;
+    height: 31dvh;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+/* Capa que se desliza al hacer hover */
+.card__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -40%; /* empieza fuera del contenedor */
+    width: 33.33%;
+    height: 100%;
+    background-color: var(--color-hover);
+    z-index: 100;
+    transform: skewX(20deg);
+    transition: transform 0.4s ease-in-out, left 0.4s ease-in-out;
+}
+
+.card__item:hover::before {
+    left: -10%;
+}
+
+/* Contenido del enlace */
+.card__link {
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    font-style: italic;
+    font-weight: bold;
+    padding-left: 80px;
+    font-size: 4rem;
+    background-color: #1119;
+    z-index: 2;
+    transition: background-color 0.4s ease, transform 0.4s ease, padding-bottom 0.4s ease;
+}
+
+.card__link:hover  {
+    text-decoration: underline var(--color-hover); /* Color y grosor del subrayado */
+    padding-bottom: 0.6rem;
+    transition: transform 0.4s ease;
+}
+
+.card__link:hover a {
+    z-index: 300;
+    text-decoration: underline ; /* Color y grosor del subrayado */
+    padding-bottom: 0.2rem;
+}
+
+.card__item:hover .card__link {
+    background-color: #0004;
+    transform: translateX(23%);
+    padding-bottom: 0.2rem;
+}
+
+/* Imágenes de fondo */
+.card1, .card2, .card3 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card1{
+    background-image: url("images/guided.png");
+}
+
+.card2{
+    background-image: url("images/selfguided.png");
+}
+
+.card3{
+    background-image: url("images/offroad2.jpg");
+}
+
+
+
+/* MAIN SECTION */
+main { 
+    background-color: #111;
+}
+
+
+
+@media (max-width: 768px) 
+{
+    .card__item:hover .card__link {
+        transform: none;
+    }
+
+    .card__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -40%; /* empieza fuera del contenedor */
+    width: 33.33%;
+    height: 100%;
+    background-color: transparent;
+    }
+    .card__link {
+    justify-content: center;
+    padding-left: 0;
+    text-align: center;
+    }
+    .high__hov {
+    font-size: 3.2rem;
+    padding: 0px 40px;
+    }
+}

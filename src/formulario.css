@@ -1,0 +1,200 @@
+/* ==========================================================================
+FORMULARIO DE CONTACTO GLOBAL (TAC ZONA PADDOCK)
+========================================================================== */
+
+/* Contenedor principal de la sección */
+.contact-form-global {
+    padding: 60px 5% 60px 5%;
+    font-family: 'Barlow', sans-serif;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-form-global .contact-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Títulos y Subtítulos */
+.contact-form-global .section-title {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-top: 0; /* Eliminamos el margen que viene por defecto */
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+
+.contact-form-global .contact-subtitle {
+    font-size: 1.1rem;
+    color: #cccccc;
+    margin-bottom: 40px;
+}
+
+/* Grid para poner los fieldsets de lado a lado en PC */
+.contact-form-global .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* Estilo de los bloques (Fieldsets) */
+.contact-form-global fieldset {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.1); /* Un poco más oscuro para legibilidad */
+    margin: 0;
+    min-width: 0; /* Evita desbordamientos en grid */
+}
+
+.contact-form-global legend {
+    color: var(--primary, #89a746); /* Usa tu verde o el verde por defecto */
+    font-weight: 900;
+    padding: 0 15px;
+    font-style: italic;
+    letter-spacing: px;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    background-color: transparent;
+    transform: translateY(-5px); /* Eleva un poco el texto para que no pise la línea */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Esto hará que resalte más sobre el fondo oscuro */
+}
+
+/* Estilo de los Inputs y Textarea */
+.contact-form-global input, 
+.contact-form-global textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: #222222;
+    border: 1px solid #333333;
+    color: #ffffff;
+    font-family: inherit;
+    box-sizing: border-box; /* Evita que el padding ensanche el input */
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.contact-form-global input:focus, 
+.contact-form-global textarea:focus {
+    outline: none;
+    border-color: var(--primary, #89a746);
+    background: #2a2a2a;
+}
+
+/* Caja informativa de tiempo de respuesta */
+.contact-form-global .form-info-box {
+    background: rgba(137, 167, 70, 0.1);
+    border-left: 4px solid var(--primary, #89a746);
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.contact-form-global .form-info-box p {
+    margin: 0;
+    font-size: 1rem;
+    color: #dddddd;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Botón de Envío */
+.contact-form-global .submit-btn {
+    width: 100%;
+    background: var(--primary, #89a746);
+    color: #ffffff;
+    border: none;
+    padding: 20px;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.contact-form-global .submit-btn:hover {
+    background: var(--primary-dark, #768f3c);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================================================
+VARIANTE PARA FONDOS CLAROS (LIGHT THEME)
+========================================================================== */
+
+.contact-form-global.light-theme {
+    color: #333333; /* Texto oscuro para que se lea bien */
+}
+
+.contact-form-global.light-theme .section-title {
+    color: #1a1a1a;
+}
+
+.contact-form-global.light-theme .contact-subtitle {
+    color: #666666;
+}
+
+.contact-form-global legend {
+    color: var(--primary); /* Usa tu verde o el verde por defecto */
+    text-shadow: none; /* Esto hará que resalte más sobre el fondo oscuro */
+}
+
+/* Ajuste de los bloques (Fieldsets) en fondo claro */
+.contact-form-global.light-theme fieldset {
+    background: #f9f9f9; /* Gris muy clarito en lugar de negro */
+    border: 1px solid #dddddd;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Un poco de sombra para dar relieve */
+}
+
+/* Ajuste de los inputs */
+.contact-form-global.light-theme input, 
+.contact-form-global.light-theme textarea {
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    color: #333333;
+}
+
+.contact-form-global.light-theme input:focus, 
+.contact-form-global.light-theme textarea:focus {
+    background: #ffffff;
+    border-color: var(--primary, #89a746);
+}
+
+/* Ajuste de la caja informativa */
+.contact-form-global.light-theme .form-info-box {
+    background: rgba(137, 167, 70, 0.08);
+    border-left-color: var(--primary, #89a746);
+}
+
+.contact-form-global.light-theme .form-info-box p {
+    color: #444444;
+}
+
+/* --- RESPONSIVE --- */
+
+@media (max-width: 992px) {
+    .contact-form-global .form-grid {
+        grid-template-columns: 1fr; /* Una columna en tablets y móviles */
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-form-global {
+        padding: 40px 20px;
+    }
+    
+    .contact-form-global .section-title {
+        font-size: 1.8rem;
+    }
+
+    .contact-form-global fieldset {
+        padding: 20px;
+    }
+}

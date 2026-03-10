@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../fonts.css">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../menurs.css">
+    <link rel="stylesheet" href="../../formulario.css">
+    <link rel="stylesheet" href="pruebaatour.css">
+    <link rel="stylesheet" href="../../rental bikes/banner.css">
+    <link rel="icon" type="../../image/png" href="../../icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>Self Guided Tour - TAC</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav__logo-container">
+                    <a href="../../index.html" title="TAC Zona Paddock">
+                        <img src="../../TAC-Mini 300X50.png" class="nav__logo" alt="TAC Zona Paddock">
+                    </a>
+                </div>
+                <button class="nav__toggle" aria-label="Open menu">☰</button>
+                <div class="nav__ul-container">
+                    <ul class="nav__ul">
+                        <li class="nav__item"><a href="../../tours/tours.html" class="nav__link active">TOURS</a></li>
+                        <li class="nav__item"><a href="../../rental bikes/rental.html" class="nav__link">ALQUILER DE MOTO</a></li>
+                        <li class="nav__item"><a href="../../aboutus/aboutus.html" class="nav__link">SOBRE NOSOTROS</a></li>
+                        <li class="nav__item"><a href="../../contact us/contactus.html" class="nav__link">CONTACTO</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="banner">
+            <div class="banner__content">
+                <h1 class="banner__title">OFFROAD EXTREME TRAIL TOUR</h1>
+                <h2 class="banner__subtitle">Libertad total para grupos de hasta 6 personas</h2>
+            </div>
+            <div class="carousel">
+                <div class="carousel__item active">
+                    <video class="carousel__video" autoplay muted loop playsinline>
+                        <source src="../../videos/landing.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section class="tour-container">
+            <div class="tour-card">
+                <div class="tour-hero">
+                    <div class="tour-hero__text">
+                        <div class="tour-header-block">
+                            <h3 class="section-title">EXPLORA A TU AIRE</h3>
+                            <span class="tech-badge">RETO TÉCNICO</span>
+                        </div>
+
+                        <div class="tour-description-block">
+                            <p class="info__text">
+                                100% OFF-ROAD — una ruta técnica que será todo un reto acabar, pero tranquilos, con nuestra ayuda lo conseguiremos.
+                            </p>
+                        </div>
+
+                        <div class="tour-tracks-info">
+                            <span class="track-item"><span class="material-symbols-outlined">route</span> 3 TRACKS DIFERENTES</span>
+                            <span class="track-item"><span class="material-symbols-outlined">conversion_path</span> +/- 150 KM DIARIOS</span>
+                        </div>
+
+                        <div class="booking-container">
+                            <div class="booking-selection">
+                                <div class="booking-field">
+                                    <label for="tour-date">SELECCIONA FECHA <span class="material-symbols-outlined" style="font-size: 1.1rem; vertical-align: middle;">calendar_month</span></label>
+                                    <input type="date" id="tour-date" class="date-input-new">
+                                </div>
+                            </div>
+                            
+                            <div class="price-box-black">
+                                <span class="price-amount" id="dynamic-price">1800€</span>
+                                <span class="price-label-new" id="price-label">(TEMPORADA BAJA)</span>
+                            </div>
+                        </div>
+
+                    
+                    </div>
+
+                    <div class="tour-hero__image">
+                        <img src="../images/extreme trail2.png" alt="Moto Trail en ruta">
+                    </div>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-box included">
+                        <h4 class="feature-title"><i class="fa-solid fa-circle-check"></i> INCLUIDO</h4>
+                        <ul class="feature-list">
+                            <li><span class="material-symbols-outlined">airport_shuttle</span> Recepción Aeropuerto/Hotel</li>
+                            <li><span class="material-symbols-outlined">two_wheeler</span> Alquiler de moto</li>
+                            <li><span class="material-symbols-outlined">restaurant</span> Hotel 4* (Pensión completa)</li>
+                            <li><span class="material-symbols-outlined">map</span> Gestión de tracks & GPS (Tablet)</li>
+                            <li><span class="material-symbols-outlined">local_gas_station</span> Gasolina incluida</li>
+                            <li><span class="material-symbols-outlined">support</span> Vehículo de apoyo</li>
+                            <li><span class="material-symbols-outlined">build</span> Asistencia técnica</li>
+                            <li><span class="material-symbols-outlined">group</span> 1 o 2 Guías Expertos</li>
+                            <li><span class="material-symbols-outlined">home_repair_service</span> SERVICE POINT</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-box excluded">
+                        <h4 class="feature-title"><i class="fa-solid fa-circle-xmark"></i> NO INCLUIDO</h4>
+                        <ul class="feature-list">
+                            <li><span class="material-symbols-outlined">flight</span> Billete de avión</li>
+                            <li><span class="material-symbols-outlined">report_problem</span> Desperfectos en la moto</li>
+                            <li><span class="material-symbols-outlined">checkroom</span> Equipación de piloto</li>
+                            <li><span class="material-symbols-outlined">health_and_safety</span> Seguro sanitario</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="gallery-wrapper">
+            <div class="gallery__group">
+                <div class="infinite__gallery">
+                    <div class="card"><img src="../../gallery/galleryimage7.jpg"></div>
+                    <div class="card"><img src="../../gallery/galleryimage.jpg"></div>
+                    <div class="card"><img src="../../gallery/galleryimage3.jpg"></div>
+                    <div class="card"><img src="../../gallery/galleryimage2.jpg"></div>
+                    <div class="card"><img src="../../gallery/galleryimage4.jpg"></div>
+                    <div class="card"><img src="../../gallery/galleryimage6.jpg"></div>
+                    <div class="card"><img src="../../gallery/galleryimage5.jpg"></div>
+                </div>
+                <div class="infinite__gallery" aria-hidden="true">
+                    <div class="card"><img src="../../gallery/galleryimage7.jpg"></div>
+                    <div class="card"><img src="../../gallery/galleryimage.jpg"></div>
+                    <div class="card"><img src="../../gallery/galleryimage3.jpg"></div>
+                    <div class="card"><img src="../../gallery/galleryimage2.jpg"></div>
+                    <div class="card"><img src="../../gallery/galleryimage4.jpg"></div>
+                    <div class="card"><img src="../../gallery/galleryimage6.jpg"></div>
+                    <div class="card"><img src="../../gallery/galleryimage5.jpg"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="contenedor-formulario-contacto"></div>
+    </main>
+
+    <footer class="footer">
+        </footer>
+
+    <div id="imagePreview" class="preview-modal">
+        <span class="preview-close">&times;</span>
+        <img class="preview-content" id="previewImg">
+        <div id="previewCaption"></div>
+    </div>
+
+    <script>
+        // Toggle Menú
+        const toggle = document.querySelector('.nav__toggle');
+        const menu = document.querySelector('.nav__ul-container');
+        toggle.addEventListener('click', () => menu.classList.toggle('active'));
+
+        // Lógica de Precios Dinámicos
+        document.getElementById('tour-date').addEventListener('change', function() {
+            const selectedDate = new Date(this.value);
+            const month = selectedDate.getUTCMonth(); 
+            const priceElement = document.getElementById('dynamic-price');
+            const labelElement = document.getElementById('price-label');
+
+            if (month >= 5 && month <= 7) { // Jun, Jul, Ago
+                priceElement.innerText = "2300€";
+                labelElement.innerText = "(Temporada Alta)";
+                priceElement.style.color = "#ff9800"; 
+            } else {
+                priceElement.innerText = "1800€";
+                labelElement.innerText = "(Temporada Baja)";
+                priceElement.style.color = "var(--primary)";
+            }
+        });
+
+        // Galería Modal
+        const modal = document.getElementById("imagePreview");
+        const modalImg = document.getElementById("previewImg");
+        const span = document.getElementsByClassName("preview-close")[0];
+
+        document.querySelectorAll('.card img').forEach(img => {
+            img.onclick = function() {
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+            }
+        });
+
+        span.onclick = () => modal.style.display = "none";
+        window.onclick = (event) => { if (event.target == modal) modal.style.display = "none"; }
+    </script>
+    <script src="../../contacto.js"></script>
+</body>
+</html>

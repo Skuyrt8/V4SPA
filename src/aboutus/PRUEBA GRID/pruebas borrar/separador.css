@@ -1,0 +1,10 @@
+
+/* Estilos para los separadores horizontales */
+.support-separator {
+    width: 30%; /* Ajusta el ancho de la línea */
+    max-width: 800px; /* Para que no sea excesivamente larga en pantallas grandes */
+    border: none; /* Quita el borde por defecto del <hr> */
+    border-top: 1px solid var(--color-hover); /* Una línea sólida sutil con tu color de hover */
+    margin: 20px auto; /* Espacio superior e inferior para el separador, y centrado */
+    opacity: 0.7; /* Hazla un poco transparente si quieres */
+}

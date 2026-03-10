@@ -1,0 +1,407 @@
+/* Variables para colores */
+:root {
+    --color-bg: #111;
+    --color-hover: rgb(182, 191, 82);
+    --color-white: #fff;
+    --color-border: #333;
+}
+
+/* Reset general */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body, header {
+    margin: 0;
+    padding: 0;
+    font-family: "barlow";
+}
+
+body {
+    margin-top: 60px; /* Deja espacio para el nav fijo */
+    /* Añadido para asegurar que no haya scroll horizontal no deseado */
+}
+
+main {
+    margin: 0 auto;
+    /* Asegurarse de que el main no cause desbordamiento */
+    width: 100%;
+}
+
+/* Banner con Carrusel */
+.banner {
+    width: 100%;
+    height: 80dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    overflow: hidden; /* Esto es bueno para el carrusel */
+    z-index: 4;
+}
+
+.banner__content {
+    z-index: 6;
+    font-size: 2rem;
+    font-weight: bold;
+    /* Añadido para asegurar que el contenido no se desborde */
+    padding: 0 20px; /* Pequeño padding para móviles */
+    max-width: 90%; /* Limita el ancho del contenido */
+    margin: 0 auto; /* Centra el contenido */
+}
+
+.carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel__item {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+.carousel__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+/* Botones del banner */
+.tour-button,
+.rental-button {
+    background-color: transparent;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 18px 36px;
+    border: 3px solid #ffffff;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 9999;
+    font-size: 1rem;
+    margin: 10px; /* Ajustado el margen a 10px por defecto para móviles */
+    display: inline-block; /* Asegura que los márgenes se apliquen correctamente */
+    white-space: nowrap; /* Evita que el texto del botón se rompa */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.tour-button:hover,
+.rental-button:hover {
+    background-color: rgba(118, 138, 47, 0.8);
+    transform: scale(1.05);
+    color: #ffffff;
+}
+
+/* Sección oscura */
+.dark-section {
+    background-color: black;
+    color: white;
+    padding: 6rem 20px; /* Ajustado el padding horizontal para ser más seguro */
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: "barlow";
+    font-size: 2.4rem;
+    font-weight: 300;
+}
+
+.dark-section__image {
+    display: block;
+    margin: 0 auto; /* Centra la imagen */
+}
+
+.dark-section__image img {
+    width: 100%;
+    max-width: 700px;
+    height: auto; /* Asegura que la altura se ajuste automáticamente */
+}
+
+.dark-section__content {
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Cambiado a columna por defecto para móviles */
+    justify-content: center; /* Cambiado de space-between a center para un mejor control */
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0rem 0.625rem 1.25rem 0.625rem;
+}
+
+/* Secciones de contenido */
+.content-section {
+    display: flex;
+    flex-flow: row; /* Por defecto para escritorio */
+    align-items: center;
+    justify-content: space-around;
+    background-color: #eee;
+    color: #000000;
+    margin: auto;
+    padding: 4rem 20px; /* Ajustado el padding horizontal */
+}
+
+.content-section :nth-last-child {
+    background-color: #ffffff; /* Esto parece un error, ¿quizás era un selector más específico? */
+}
+
+.content-section__image img {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    object-fit: cover;
+}
+
+.content-section__text {
+    max-width: 40%; /* Por defecto para escritorio */
+    margin: 2.4rem;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 0 15px; /* Añadido padding horizontal para texto en móvil */
+}
+
+.content-section__text h2 {
+    font-style: italic;
+    font-size: 2.8rem;
+}
+
+.content-section__text a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.content-section__text a:hover {
+    color:var(--color-white);
+}
+
+.content-section__text p {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.content-section--reverse {
+    flex-direction: row-reverse;
+}
+
+.button2 {
+    /* Valores por defecto más seguros para empezar, se sobrescriben en escritorio */
+    margin: 1rem auto; /* Centrado y adaptable */
+    max-width: 300px; /* Limita el ancho del botón */
+    width: 90%; /* Ocupa el 90% del ancho disponible para dar espacio */
+    background-color: #222;
+    color: var(--color-white);
+    font-weight: bold;
+    padding: 12px 18px;
+    border: 1px solid #89a746;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 9990;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block; /* Para que margin: auto funcione correctamente */
+}
+
+.button2:hover {
+    background-color: rgb(118, 138, 47);
+    transform: scale(1.05);
+    color: #ffffff;
+}
+
+/* Level Section */
+.level-section {
+    background-color: #eee;
+    padding: 2rem 20px; /* Ajustado el padding horizontal */
+    text-align: center;
+}
+
+.level-section h2 {
+    font-style: italic;
+    font-size: 4rem;
+    margin-bottom: 4rem;
+}
+
+.level__container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding-bottom: 4rem;
+    margin: auto;
+    max-width: 50rem;
+    width: 100%;
+    /* Asegurado que el contenedor no se desborde */
+    padding: 0 10px;
+}
+
+.level__card {
+    color: #111;
+    padding: 15px; /* Añadido padding para el contenido de la tarjeta */
+}
+
+.level__card h3 {
+    font-size: 3rem;
+    font-style: italic;
+    margin: auto;
+}
+
+.level__card p {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Dark Section */
+@media (max-width: 768px) {
+    .banner__content {
+        display: flex;
+        flex-flow: column;
+        /* Asegurado el ancho del título en móvil */
+        font-size: 1.5rem; /* Ajuste el tamaño de la fuente para móviles */
+        max-width: 95%; /* Asegura que el texto no se desborde */
+    }
+
+    .dark-section {
+        padding: 4.4rem 2.4rem;
+        font-size: 2rem;
+    }
+
+    .dark-section__image img {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .dark-section__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px){
+    .level-section h2 {
+        font-style: italic;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+    
+    .level__card h3 {
+    font-size: 2rem;
+    font-style: italic;
+    text-decoration: underline;
+    }
+
+    .level__card p {
+        font-size: 1.8rem;
+    }
+}
+
+/* Responsive Content */
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    .content-section__text h2 {
+        text-decoration: underline;
+        text-underline-offset: 10px;
+    }
+
+    .content-section--reverse {
+        flex-direction: column; /* Asegura que se mantenga en columna en móvil */
+    }
+
+    .content-section__image img {
+        height: auto;
+        max-height: 350px;
+        margin-bottom: 20px;
+        max-width: 100%; /* Cambiado de 1000px a 100% para evitar desbordamiento */
+        display: block; /* Asegura que margin auto funcione si lo usas */
+        margin: 0 auto; /* Centra la imagen en móvil */
+    }
+
+    .content-section__text {
+        max-width: 100%;
+        margin: 0;
+        padding: 0 20px;
+    }
+
+    .content-section__text h2 {
+        font-size: 2rem;
+    }
+
+    .content-section__text p {
+        font-size: 1rem;
+    }
+
+    .button2 {
+        margin: auto;
+        margin-bottom: 2rem;
+        width: 90%; /* Ajustado a 90% para dar un poco más de margen en móviles */
+        max-width: 300px; /* Mantener un max-width para que no se estire demasiado en tablets */
+    }
+}
+
+/* Responsive para escritorio */
+@media (min-width: 769px) {
+    .button2 {
+        margin: 1rem 12rem; /* Aplica el margen grande solo en escritorio */
+        width: auto; /* Deja que el ancho se ajuste al contenido con el padding */
+    }
+    .content-section__text {
+        margin-left: 2.4rem;
+        padding: 0; /* Elimina el padding extra para escritorio */
+    }
+    .dark-section__content {
+        flex-direction: row; /* Vuelve a row en escritorio si era flex */
+    }
+}
+
+.highlight {
+    border-bottom: 3px solid #89a746;
+    padding-bottom: 0.2rem;
+}
+
+/* Divider (parece no usarse en el HTML que compartiste) */
+.divider {
+    color: rgb(0, 128, 255);
+    display: flex;
+    font-size: 3px;
+    font-weight: 500;
+    height: 10px;
+    line-height: 10px;
+}
+
+/* HELP BUTTON */
+.help-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #222;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 12px 18px;
+    border: 1px solid #89a746;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 9999;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    white-space: nowrap; /* Evita que el texto del botón se rompa */
+}
+
+.help-button:hover {
+    background-color: rgb(118, 138, 47);
+    transform: scale(1.05);
+    color: #ffffff;
+}

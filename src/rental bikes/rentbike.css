@@ -1,0 +1,416 @@
+/* Variables para colores */
+:root {
+    --color-bg: #111;
+    --color-hover: rgb(182, 191, 82);
+    --color-white: #fff;
+    --color-border: #333;
+}
+
+/* Reset general */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "barlow";
+    overflow-x: hidden; /* Previene scroll lateral */
+}
+
+body {
+    margin-top: 60px; /* Deja espacio para el nav fijo */
+}
+
+main {
+    margin: auto;
+    text-wrap: pretty;
+    background-color: #eee;
+}
+
+/* Rental Bikes */
+
+h2 {
+    margin-top: 30px;
+    font-style: italic;
+    font-size: 2.8rem;
+    text-align: center;
+}
+
+h2:first-child {
+    margin-top: 0;
+}
+
+.rental__section {
+    max-width: 100%;
+    flex-flow: column wrap;
+    display: flex;
+    background-color: #fffe;
+    padding: 30px 120px;
+}
+
+.rental__container {
+    flex-flow: column wrap;
+    display: flex;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.img__item {
+    width: 600px;
+    margin: auto;
+    display: block;
+    margin-bottom: 50px;
+}
+
+.splide__list {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: auto;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.content {
+    padding: 0px 20px 0px 0px;
+    border-right: 2.4px solid #9ebd6f;
+}
+
+.content:last-child {
+    border: none;
+}
+
+.title, .subtitle {
+    padding: 20px 30px 10px 30px;
+    margin: auto;
+    display: flex;
+    text-align: center;
+}
+
+.title {
+    font: 2.2em sans-serif;
+    flex-flow: column wrap;
+    font-weight: bold;
+}
+
+.subtitle {
+    font: 1.1em sans-serif;
+    flex-flow: column wrap;
+    color: var(--color-hover);
+    font-weight: bold;
+    margin: 0 20px;
+    padding: 0;
+}
+
+.list__item {
+    font: 2em sans-serif;
+    padding: 10px;
+}
+
+.kove__item {
+    margin-bottom: 100px;
+}
+
+.button__container {
+    display: flex;
+}
+
+.rentbike-button {
+    background-color: #222;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 18px 36px;
+    border: 4px solid #ffffff;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 10;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.rentbike-button:hover {
+    background-color: rgba(118, 138, 47, 0.8);
+    transform: scale(1.05);
+    color: #ffffff;
+}
+
+.button1 {
+    background-color: #8da946;
+}
+
+.moto__block {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 10px 140px;
+}
+
+.moto__block p {
+    max-width: 500px;
+    text-align: justify;
+}
+
+.bike__info {
+    display: flex wrap;
+    flex-flow: column;
+    margin: auto;
+}
+
+.bike__info h3 {
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.price__info {
+    display: flex;
+    align-items: center;      /* Alinea verticalmente */
+    justify-content: center;  /* Centra todo horizontalmente */
+    gap: 20px;                /* Espacio entre "Price:" y la cifra */
+    font-size: 1.6rem;
+}
+
+
+.price-value {
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 8px 60px;
+    border: 2px solid black;
+    border-radius: 2px solid black;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    margin: 1px;
+}
+
+
+/* VENTANA MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal:target {
+    display: flex;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 2rem;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    overflow-x: auto;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.rates-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.rates-table thead {
+    background-color: #333;
+    color: white;
+    text-transform: uppercase;
+}
+
+.rates-table th {
+    padding: 15px;
+    text-align: left;
+    font-size: 1rem;
+    color: #8da946;
+}
+
+.rates-table td {
+    padding: 15px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.rates-table tbody tr:nth-child(odd) {
+    background-color: #eee;
+}
+
+.rates-table tbody tr:nth-child(even) {
+    background-color: #fff;
+}
+
+.fianza-notice {
+    color: #999;
+    text-align: right;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.fianza-notice span {
+    color: #111;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.upgrade__box{
+    display: flex wrap;
+    flex-direction:row;
+}
+
+.recuadro-marcable{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+/* --- MEDIA QUERIES SOLO RESPONSIVE --- */
+
+@media (max-width: 1024px) {
+    .rental__section {
+        padding: 30px 60px;
+    }
+
+    .moto__block {
+        padding: 10px 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    .rental__section {
+        padding: 20px;
+    }
+
+    .rental__container {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .img__item {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto 30px auto;
+    }
+
+    .moto__block {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+        /* Adaptaciones para centrado */
+        width: 100%;
+        max-width: 600px; /* Puedes ajustar este valor si lo necesitas */
+        margin: 0 auto;
+    }
+
+    .bike__info {
+        text-align: center;
+        width: 100%;
+    }
+
+    .button__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .splide__list {
+        flex-direction: column; /* Cambiado de "column wrap" a solo "column" */
+        align-items: center;
+        font-size: 0.8rem;
+        /* Adaptaciones para centrado */
+        width: 100%;
+        margin: 0 auto;
+        padding: 0; /* Asegura que no haya paddings que desplacen */
+    }
+
+    .content {
+        border-right: none;
+        border-bottom: 1px solid #9ebd6f;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        /* Adaptaciones para centrado */
+        width: 100%;
+        text-align: center;
+        padding-right: 0; /* Elimina padding a la derecha que pueda desplazar */
+    }
+
+    .rentbike-button {
+        width: 90%;
+    }
+
+    /* Ajustar los títulos y subtítulos dentro de .content para que estén centrados */
+    .content .title,
+    .content .subtitle {
+        text-align: center;
+        width: 100%; /* Asegura que ocupen el 100% del ancho del .content */
+        margin: auto; /* Centra horizontalmente */
+    }
+}
+
+@media (max-width: 480px) {
+    .rental__section {
+        padding: 10px;
+    }
+
+    .moto__block {
+        padding: 10px;
+        /* Reafirmar para móviles más pequeños si es necesario */
+        width: 100%;
+        max-width: none; /* Elimina el max-width si quieres que ocupe todo el ancho disponible */
+        margin: 0 auto;
+    }
+
+    .splide__list {
+        /* Reafirmar para móviles más pequeños */
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .content {
+        /* Reafirmar para móviles más pequeños */
+        width: 100%;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .rentbike-button {
+        width: 90%;
+        padding: 16px;
+    }
+
+    .img__item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Reafirmar los títulos y subtítulos dentro de .content para que estén centrados */
+    .content .title,
+    .content .subtitle {
+        text-align: center;
+        width: 100%;
+        margin: auto;
+    }
+}

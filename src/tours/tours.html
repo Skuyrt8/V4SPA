@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tours</title>
+    <link rel="stylesheet" href="../fonts.css">
+    <link rel="stylesheet" href="../menurs.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="tours.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="../image/png" href="../icon.png">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav__logo-container">
+                    <a href="../index.html" title="TAC Zona Paddock">
+                        <img src="../TAC-Mini 300X50.png" class="nav__logo" alt="TAC Zona Paddock">
+                    </a>
+                </div>
+
+                <button class="nav__toggle" aria-label="Open menu">☰</button>
+
+                <div class="nav__ul-container">
+                    <ul class="nav__ul">
+                        <li class="nav__item"><a href="../tours/tours.html" class="nav__link nav__link.active active">TOURS</a></li>
+                        <li class="nav__item"><a href="../rental bikes/rental.html" class="nav__link nav__link.active ">ALQUILER DE MOTOS</a></li>
+                        <li class="nav__item"><a href="../aboutus/aboutus.html" class="nav__link nav__link.active">SOBRE NOSOTROS</a></li>
+                        <li class="nav__item"><a href="../contact us/contactus.html" class="nav__link nav__link.active ">CONTACTO</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="div__banner">
+            <ul class="ul__container">
+                <li class="card__item card2">
+                    <a href="tours/selfguided.html" class="card__link"><span class="high__hov">AUTOGUIADO</span>
+                    </a>
+                </li>
+                <li class="card__item card1">
+                    <a href="tours/guided.html" class="card__link"><span class="high__hov">GUIADO</span>
+                    </a>
+                </li>
+                <li class="card__item card3">
+                    <a href="tours/extreme.html" class="card__link"><span class="high__hov">OFFROAD EXTREME TRAIL TOUR</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <!-- Logo -->
+            <div class="footer_columns">
+                <div class="footer__logo">
+                    <a class="footer__img1" href="../index.html" title="TAC Zona Paddock"> <!-- Ruta corregida -->
+                        <img src="../TAC-BIG.png" class="footer__img" alt="TAC Zona Paddock"> <!-- Ruta corregida -->
+                    </a>
+                </div>
+            </div>
+        
+            <!-- Enlaces -->
+            <div class="footer__links">
+                <div class="footer__columns">
+                    <div class="footer__info">
+                        <h6>SUPPORT</h6>
+                        <a href="../contact us/contactus.html">CONTACT</a>
+                        <a href="#">TERMS OF SERVICE</a>
+                        <a href="#">PRIVACY POLICY</a>
+                        <a href="../faq/faq.html">FAQ</a>
+                    </div>
+                </div>
+                <div class="footer__columns">
+                    <div class="footer__info">
+                        <h6>GENERAL</h6>
+                        <a href="../aboutus/aboutus.html">ABOUT US</a>
+                        <a href="#">EVENTS</a>
+                    </div>
+                </div>
+            </div>
+                
+                
+            <!-- Contacto -->
+            <div class="footer_columns">
+                <div class="footer__info">
+                    <h6>GIVE US A SHOUT!!</h6>
+                    <p>PHONE/EMAIL</p>
+                    <p>ENGLISH & SPANISH</p>
+                    <p><a href="tel:+34628292936">📞 +34 628292936</a></p>
+                    <p><a href="mailto:javibezama@zonapaddock.com">javibezama@zonapaddock.com</a></p>
+                    <p>SCHEDULE:</p><p>LUN-VIE &nbsp; 9AM-7PM</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a href="../faq/faq.html" class="help-button" title="¿Necesitas ayuda? Contáctanos">
+        KNOW MORE
+    </a>  
+    <div class="sn__box" title="Social Network Menu">
+        <a href="https://www.instagram.com/trailadventurecantabria2/" class="sn-button" title="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a> 
+        <a href="https://www.facebook.com/" class="sn-button" title="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a> 
+        <a href="tel:+34628292936" class="sn-button" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a> 
+        <a href="https://www.youtube.com/@TrailAdventureCantabria" class="sn-button" title="YouTube">
+            <i class="fab fa-youtube"></i> 
+        </a> 
+    </div>
+    <script>
+        const toggle = document.querySelector('.nav__toggle');
+        const menu = document.querySelector('.nav__ul-container');
+
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
